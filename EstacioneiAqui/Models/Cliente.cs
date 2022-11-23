@@ -13,6 +13,7 @@ namespace EstacioneiAqui.Models
         public string MarcaDoVeiculo { get; set; }
         public string Placa { get; set; }
         public string Categoria { get; set; }
+        public int NumeroDaVaga { get; set; }
         public DateTime DataEntrada { get; set; }
         public DateTime DataSaida { get; set; }
         public decimal ValorPorHora { get; set; }
