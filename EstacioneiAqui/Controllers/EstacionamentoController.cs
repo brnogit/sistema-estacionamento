@@ -15,6 +15,11 @@ namespace EstacioneiAqui.Controllers
             _context = context;
         }
 
-        
+        [HttpGet]
+        public IActionResult Index()
+        {
+            var clientes = _context.Clientes.ToList();
+            return View(clientes);
+        }
     }
 }
