@@ -19,5 +19,6 @@ namespace EstacioneiAqui.Models
         public decimal ValorPorHora { get; set; }
         public decimal ValorTotal { get; set; }
         public string NomeManobrista { get; set; }
+        public EnumStatusPagamento Status { get; set; }
     }
 }
