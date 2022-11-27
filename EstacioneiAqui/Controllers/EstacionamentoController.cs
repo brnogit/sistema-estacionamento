@@ -21,5 +21,11 @@ namespace EstacioneiAqui.Controllers
             var clientes = _context.Clientes.ToList();
             return View(clientes);
         }
+
+        [HttpGet]
+        public IActionResult Criar()
+        {
+            return View();
+        }
     }
 }

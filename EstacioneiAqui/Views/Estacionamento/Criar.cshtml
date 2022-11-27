@@ -1,0 +1,70 @@
+@model EstacioneiAqui.Models.Cliente
+
+@{
+    ViewData["Title"] = "Cadastrar cliente";
+}
+
+<h1>Cadastrar cliente</h1>
+
+<hr/>
+        <form asp-action="Criar">
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label asp-for="NomeCliente" class="control-label">Nome do Cliente</label>
+                    <input asp-for="NomeCliente" class="form-control" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="ModeloDoVeiculo" class="control-label">Modelo do Veiculo</label>
+                    <input asp-for="ModeloDoVeiculo" class="form-control" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label asp-for="MarcaDoVeiculo" class="control-label">Marca do Veiculo</label>
+                    <input asp-for="MarcaDoVeiculo" class="form-control" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="Placa" class="control-label">Placa do veículo</label>
+                    <input asp-for="Placa" class="form-control" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label asp-for="NumeroDaVaga" class="control-label">Numero da Vaga</label>
+                    <input asp-for="NumeroDaVaga" class="form-control" />
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="DataEntrada" class="control-label">Data de Entrada</label>
+                    <input asp-for="DataEntrada" class="form-control" />
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="DataSaida" class="control-label">Data de Saida</label>
+                    <input asp-for="DataSaida" class="form-control" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <label asp-for="ValorPorHora" class="control-label">Valor Por Hora</label>
+                    <input asp-for="ValorPorHora" class="form-control"/>
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="ValorTotal" class="control-label">Valor Total</label>
+                    <input asp-for="ValorTotal" class="form-control">
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="NomeManobrista" class="control-label">Nome do Manobrista</label>
+                    <input asp-for="NomeManobrista" class="form-control" />
+                </div>
+            </div>
+            <br>
+            <div class="form-group col-md-6">
+                <label asp-for="Status" class="control-label"></label>
+                <select asp-for="Status" asp-items="Html.GetEnumSelectList<EnumStatusPagamento>()">
+                    <option selected="selected" value=""> - Selecione o Status - </option>
+                </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Criar" class="btn btn-primary col-md-12">
+            </div>
+        </form>
