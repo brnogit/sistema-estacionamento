@@ -23,6 +23,7 @@ namespace EstacioneiAqui.Controllers
             return View(clientes);
         }
 
+        #region Criar
         [HttpGet]
         public IActionResult Criar()
         {
@@ -40,6 +41,7 @@ namespace EstacioneiAqui.Controllers
             }
             return View(cliente);
         }
+        #endregion
 
         [HttpGet]
         public IActionResult Atualizar(int id)
