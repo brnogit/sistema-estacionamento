@@ -53,5 +53,24 @@ namespace EstacioneiAqui.Controllers
 
             return View(cliente);
         }
+
+        [HttpPost]
+        public IActionResult Atualizar(Cliente cliente)
+        {
+            var clienteBanco = _context.Clientes.Find(cliente.Id);
+
+            clienteBanco.NomeCliente = cliente.NomeCliente;
+            clienteBanco.MarcaDoVeiculo = cliente.MarcaDoVeiculo;
+            clienteBanco.ModeloDoVeiculo = cliente.ModeloDoVeiculo;
+            clienteBanco.Placa = cliente.Placa;
+            clienteBanco.Status = cliente.Status;
+            clienteBanco.NumeroDaVaga = cliente.NumeroDaVaga;
+            clienteBanco.NomeManobrista = cliente.NomeManobrista;
+
+            _context.Clientes.Update(clienteBanco);
+            _context.SaveChanges();
+
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
