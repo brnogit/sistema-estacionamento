@@ -43,6 +43,7 @@ namespace EstacioneiAqui.Controllers
         }
         #endregion
 
+        #region Atualizar
         [HttpGet]
         public IActionResult Atualizar(int id)
         {
@@ -74,5 +75,6 @@ namespace EstacioneiAqui.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+        #endregion
     }
 }
