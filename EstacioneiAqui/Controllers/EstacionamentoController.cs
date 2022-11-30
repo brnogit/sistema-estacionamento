@@ -69,6 +69,10 @@ namespace EstacioneiAqui.Controllers
             clienteBanco.Status = cliente.Status;
             clienteBanco.NumeroDaVaga = cliente.NumeroDaVaga;
             clienteBanco.NomeManobrista = cliente.NomeManobrista;
+            clienteBanco.DataEntrada = cliente.DataEntrada;
+            clienteBanco.DataSaida = cliente.DataSaida;
+            clienteBanco.ValorPorHora = cliente.ValorPorHora;
+            clienteBanco.ValorTotal = cliente.ValorTotal;
 
             _context.Clientes.Update(clienteBanco);
             _context.SaveChanges();
