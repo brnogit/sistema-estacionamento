@@ -80,5 +80,18 @@ namespace EstacioneiAqui.Controllers
             return RedirectToAction(nameof(Index));
         }
         #endregion
+
+        [HttpGet]
+        public IActionResult Detalhes(int id)
+        {
+            var cliente = _context.Clientes.Find(id);
+
+            if(cliente == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(cliente);
+        }
     }
 }
