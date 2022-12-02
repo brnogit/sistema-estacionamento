@@ -93,5 +93,18 @@ namespace EstacioneiAqui.Controllers
 
             return View(cliente);
         }
+
+        [HttpGet]
+        public IActionResult Deletar(int id)
+        {
+            var cliente = _context.Clientes.Find(id);
+
+            if(cliente == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(cliente);
+        }
     }
 }
