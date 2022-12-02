@@ -1,0 +1,85 @@
+@model EstacioneiAqui.Models.Cliente
+
+@{
+    ViewData["Title"] = "Deletar Cliente";
+}
+
+<h1 style="color: red">Deseja realmente deletar esse registro de cliente? Essa operação é irreversível</h1>
+
+</hr>
+
+<dl class="row">
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(x => x.NomeCliente)
+    </dt>
+    <dt class="col-sm-10">
+        @Html.DisplayFor(x => x.NomeCliente)
+    </dt>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(x => x.ModeloDoVeiculo)
+    </dt>
+    <dt class="col-sm-10">
+        @Html.DisplayFor(x => x.ModeloDoVeiculo)
+    </dt>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(x => x.MarcaDoVeiculo)
+    </dt>
+    <dt class="col-sm-10">
+        @Html.DisplayFor(x => x.MarcaDoVeiculo)
+    </dt>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(x => x.Placa)
+    </dt>
+    <dt class="col-sm-10">
+        @Html.DisplayFor(x => x.Placa)
+    </dt>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(x => x.NumeroDaVaga)
+    </dt>
+    <dt class="col-sm-10">
+        @Html.DisplayFor(x => x.NumeroDaVaga)
+    </dt>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(x => x.DataEntrada)
+    </dt>
+    <dt class="col-sm-10">
+        @Html.DisplayFor(x => x.DataEntrada)
+    </dt>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(x => x.DataSaida)
+    </dt>
+    <dt class="col-sm-10">
+        @Html.DisplayFor(x => x.DataSaida)
+    </dt>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(x => x.ValorPorHora)
+    </dt>
+    <dt class="col-sm-10">
+        @Html.DisplayFor(x => x.ValorPorHora)
+    </dt>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(x => x.ValorTotal)
+    </dt>
+    <dt class="col-sm-10">
+        @Html.DisplayFor(x => x.ValorTotal)
+    </dt>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(x => x.NomeManobrista)
+    </dt>
+    <dt class="col-sm-10">
+        @Html.DisplayFor(x => x.NomeManobrista)
+    </dt>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(x => x.Status)
+    </dt>
+    <dt class="col-sm-10">
+        @Html.DisplayFor(x => x.Status)
+    </dt>
+</dl>
+
+<form asp-action="Deletar">
+    <input type="submit" value="Deletar" class="btn btn-danger" />
+</form>
+
+<br>
+<a asp-action="Index"><< Voltar</a>
