@@ -81,6 +81,7 @@ namespace EstacioneiAqui.Controllers
         }
         #endregion
 
+        #region Detalhes
         [HttpGet]
         public IActionResult Detalhes(int id)
         {
@@ -93,7 +94,9 @@ namespace EstacioneiAqui.Controllers
 
             return View(cliente);
         }
+        #endregion
 
+        #region Deletar
         [HttpGet]
         public IActionResult Deletar(int id)
         {
@@ -117,5 +120,6 @@ namespace EstacioneiAqui.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+        #endregion
     }
 }
